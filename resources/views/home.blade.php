@@ -4,7 +4,7 @@
    <div class="row">
 
       <div class="col-md-3">
-        <a href="/profile/change">Change Profile</a>
+        <a href="/profile/changeform">Change Profile</a>
          <h4><strong>{{ Auth::user()->name }} {{ Auth::user()->surname }} ( {{ Auth::user()->nickname }} )</strong></h4>
          <p>{{Auth::user()->biography}}</p>
          <div class="list-group">
