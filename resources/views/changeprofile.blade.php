@@ -10,6 +10,7 @@
         </div>
 
         <div class="form-group">
+            {{csrf_field()}}
             <input type="submit" class="btn btn-success pull-right" value="Upload new picture">
         </div>
     </form>
