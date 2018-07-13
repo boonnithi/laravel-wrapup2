@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Post; //don't forget this line.
 
+use Auth;
+
 class PostController extends Controller
 {
     public function like($id)
