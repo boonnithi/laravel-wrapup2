@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
+Route::get('/profile/change', 'ProfileController@showChangeProfileForm');
 Route::get('/like/{id}', 'PostController@like');
 
 Route::post('/post/new', 'PostController@post');
