@@ -31,7 +31,9 @@
          @foreach ($posts->get() as $post)
          <div class="panel panel-default">
             <div class="panel-body">
-            {{$post->body}}
+            <h4>{{$post->owner->name}} {{$post->owner->surname}}</h4> {{-- I'm so confused because why not use $post->owner()->name instead $post->owner->surname (why () missing) https://stackoverflow.com/questions/47010807/undefined-property-illuminate-database-eloquent-relations-belongstoname-lara OK, many people found this problems too and fix by same method--}}
+            <p>{{$post->body}}</p>
+            <a href="/like/{{$post->id}}"><strong>{{$post->likes}} Like(s)</strong></a>
 
             </div>
          </div>
