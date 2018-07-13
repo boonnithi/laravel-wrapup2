@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/profile/changeform', 'ProfileController@showChangeProfileForm');
-Route::get('/profile/change', 'ProfileController@change');
+Route::post('/profile/change', 'ProfileController@change');
 Route::get('/like/{id}', 'PostController@like');
 
 Route::post('/post/new', 'PostController@post');
