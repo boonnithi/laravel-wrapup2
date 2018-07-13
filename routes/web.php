@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/like/{id}', 'PostController@like');
+
+Route::post('/post/new', 'PostController@post');
