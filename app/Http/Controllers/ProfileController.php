@@ -15,7 +15,7 @@ class ProfileController extends Controller
     {
         $avatar = request()->file('avatar');//can add 'Request $request' at method's arguments, I use that becuase to try helper function but it's put same results.
         $ext = $file->guessClientExtension();//can use $file->extension(); for same results. 
-        $file->storeAs('avatar' . Auth::user()->id, 'avatar.' . $ext);
+        $file->storeAs('avatar/' . Auth::user()->id, 'avatar.' . $ext);
 
         return redirect('/home');
     }
