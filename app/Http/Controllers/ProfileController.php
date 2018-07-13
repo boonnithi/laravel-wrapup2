@@ -14,8 +14,8 @@ class ProfileController extends Controller
     public function change()
     {
         $avatar = request()->file('avatar');//can add 'Request $request' at method's arguments, I use that becuase to try helper function but it's put same results.
-        $ext = $file->guessClientExtension();//can use $file->extension(); for same results. 
-        $file->storeAs('avatar/' . Auth::user()->id, 'avatar.' . $ext);
+        $ext = $avatar->guessClientExtension();//can use $file->extension(); for same results. 
+        $avatar->storeAs('avatar/' . Auth::user()->id, 'avatar.' . $ext, 'avatar');
 
         return redirect('/home');
     }
