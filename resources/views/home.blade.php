@@ -22,6 +22,7 @@
                      <textarea class="form-control" name="body" rows="8" cols="80"></textarea>
                   </div>
                   <div class="form-group pull-right">
+                    {{csrf_field()}}
                      <input type="submit" class="btn btn-primary" value="Post">
                   </div>
                </form>
