@@ -25,6 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home', ['posts' => Auth::user()->posts()]);
+        return view('home', ['posts' => Auth::user()->posts()->orderBy('created_at', 'DESC')]);
     }
 }
